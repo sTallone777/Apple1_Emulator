@@ -7,9 +7,12 @@ int main() {
     cpu.PC = 0x0800; 
 
     // 2. 编写并“烧录”机器码
-    memory[0x0800] = INS_LDA_IM; memory[0x0801] = 0x05;
-    memory[0x0802] = INS_ADC_IM; memory[0x0803] = 0x03;
-    memory[0x0804] = INS_STA_ZP; memory[0x0805] = 0x00;
+    memory[0x0800] = INS_LDA_IM; 
+    memory[0x0801] = 0x05;
+    memory[0x0802] = INS_ADC_IM; 
+    memory[0x0803] = 0x03;
+    memory[0x0804] = INS_STA_ZP; 
+    memory[0x0805] = 0x00;
 
     // 3. 运行 CPU 
     printf("--- 系统启动 ---\n");
